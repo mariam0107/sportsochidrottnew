@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<!-- META SECTION -->
+<title>SportsOchIdrott Klub Finder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- END META SECTION -->
+<!--  BEGIN STYLE -->
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 1px;
+}
+</style>
+<!--  END STYLE -->
+
+</head>
+<body>
+		<div>
+			<h2>Sports Available</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>SportsID</th>
+						<th>SportsItems</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="sports : ${sports}">
+						<td th:text="${sports.sportsid}">Text ...</td>
+						<td th:text="${sports.sportsitem}">Text ...</td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	
+</body>
+</html>
